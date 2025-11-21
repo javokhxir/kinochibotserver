@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 # BOT tokeni
-TOKEN = ""
+TOKEN = "8334158819:AAFx1v_OKl8WepbfsTQApMoc2PSCqtTuh3c"
 bot = telebot.TeleBot(TOKEN)
 
 # obuna bolish kerak bolgan kanallar
@@ -24,7 +24,7 @@ def check_user(user_id):
 # databasaga saqlash
 from pymongo import MongoClient
 
-MONGO_URL = ""
+MONGO_URL = "mongodb+srv://djakhadeveloper_db_user:8cUTjurEz7nXHIiU@cluster0.pmeicy8.mongodb.net/?appName=Cluster0"
 client = MongoClient(MONGO_URL)
 
 db = client["kinochi_bot"]
@@ -89,3 +89,4 @@ def all_messages(message):
         bot.send_message(message.chat.id, "notogri formatdagi kod")
 
 bot.polling()
+
