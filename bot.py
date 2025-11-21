@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 # BOT tokeni
-TOKEN = ""
+TOKEN = "8334158819:AAFx1v_OKl8WepbfsTQApMoc2PSCqtTuh3c"
 bot = telebot.TeleBot(TOKEN)
 
 # obuna bolish kerak bolgan kanallar
@@ -102,4 +102,5 @@ def run_bot():
 
 if __name__ == "__main__":
     threading.Thread(target=run_bot).start()
+
     app.run(host="0.0.0.0", port=5000, debug=False)
