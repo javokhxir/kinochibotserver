@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 # BOT tokeni
-TOKEN = "8334158819:AAFx1v_OKl8WepbfsTQApMoc2PSCqtTuh3c"
+TOKEN = ""
 bot = telebot.TeleBot(TOKEN)
 
 # obuna bolish kerak bolgan kanallar
@@ -88,19 +88,4 @@ def all_messages(message):
     else:
         bot.send_message(message.chat.id, "notogri formatdagi kod")
 
-
-from flask import Flask
-import threading
-app = Flask(__name__)
-
-@app.route("/", methods=["GET"])
-def home():
-    return "salom bot ishlayapti", 200
-
-def run_bot():
-    bot.polling(non_stop=True)
-
-if __name__ == "__main__":
-    threading.Thread(target=run_bot).start()
-
-    app.run(host="0.0.0.0", port=5000, debug=False)
+bot.polling()
